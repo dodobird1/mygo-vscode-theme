@@ -1,6 +1,5 @@
 {
     "workbench.colorTheme": "Default Dark Modern",
-    "python.defaultInterpreterPath": "/usr/bin/python3",
     "editor.tokenColorCustomizations": {
     "textMateRules": [
         // 1. 注释 (更新)
