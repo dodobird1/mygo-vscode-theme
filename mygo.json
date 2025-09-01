@@ -1,0 +1,68 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "editor.tokenColorCustomizations": {
+    "textMateRules": [
+        // 您原有的注释规则 (保留)
+        {
+            "name": "Soyo - Comments",
+            "scope": [
+                "comment",
+                "punctuation.definition.comment",
+                "string.quoted.docstring"
+            ],
+            "settings": {
+                "foreground": "#ffdd88"
+            }
+        },
+        // 您原有的Python关键字规则 (保留)
+        {
+            "name": "Taki - Python Keywords",
+            "scope": [
+                "keyword.control.flow.python",
+                "keyword.control.conditional.python",
+                "keyword.control.import.python",
+                "keyword.operator.logical.python",
+                "keyword.other.python",
+                "storage.type.function.python",
+                "storage.type.class.python",
+                "support.type.python"
+            ],
+            "settings": {
+                "foreground": "#7777aa",
+                "fontStyle": "bold"
+            }
+        },
+        // --- 以下是新增的规则 ---
+        {
+            "name": "Custom - Numbers",
+            "scope": [
+                "constant.numeric" // 匹配所有数字
+            ],
+            "settings": {
+                "foreground": "#77dd77"
+            }
+        },
+        {
+            "name": "Custom - Strings",
+            "scope": [
+                "string" // 匹配所有字符串
+            ],
+            "settings": {
+                "foreground": "#FF8899"
+            }
+        },
+        {
+            "name": "Custom - Functions and Variables",
+            "scope": [
+                "variable", // 匹配所有变量
+                "entity.name.function", // 匹配函数和方法的定义名称
+                "meta.function-call entity.name.function", // 匹配函数调用
+                "support.function" // 匹配内置函数，如 print()
+            ],
+            "settings": {
+                "foreground": "#77bbdd"
+            }
+        }
+    ]
+}
+}
