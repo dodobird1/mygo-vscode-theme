@@ -1,68 +1,99 @@
 {
     "workbench.colorTheme": "Default Dark Modern",
     "editor.tokenColorCustomizations": {
-    "textMateRules": [
-        // 您原有的注释规则 (保留)
-        {
-            "name": "Soyo - Comments",
-            "scope": [
-                "comment",
-                "punctuation.definition.comment",
-                "string.quoted.docstring"
-            ],
-            "settings": {
-                "foreground": "#ffdd88"
+        "textMateRules": [
+            // 1. 注释 (通用)
+            // 这个规则是通用的，对 C++ 的 // 和 /* */ 注释同样有效。
+            {
+                "name": "Soyo - Comments",
+                "scope": [
+                    "comment",
+                    "punctuation.definition.comment",
+                    "string.quoted.docstring" // 主要用于 Python
+                ],
+                "settings": {
+                    "foreground": "#ffdd88"
+                }
+            },
+            // 2. Python 关键字 (保留)
+            // 这条规则专门针对 Python，保持不变。
+            {
+                "name": "Taki - Python Keywords",
+                "scope": [
+                    "keyword.control.flow.python",
+                    "keyword.control.conditional.python",
+                    "keyword.control.import.python",
+                    "keyword.operator.logical.python",
+                    "keyword.other.python",
+                    "storage.type.function.python", // def, class
+                    "storage.type.class.python",
+                    "support.type.python" // str, int
+                ],
+                "settings": {
+                    "foreground": "#7777aa",
+                    "fontStyle": "bold"
+                }
+            },
+            // 3. C++ 关键字和内置类型 (新增)
+            // 为 C++ 添加了与 Python 关键字类似的规则。
+            {
+                "name": "Taki - C++ Keywords & Types",
+                "scope": [
+                    "keyword.control.cpp",          // if, else, for, while, return
+                    "keyword.operator.new.cpp",     // new, delete
+                    "storage.modifier.cpp",         // static, const, virtual
+                    "storage.type.cpp"              // int, double, bool, auto
+                ],
+                "settings": {
+                    "foreground": "#7777aa",
+                    "fontStyle": "bold"
+                }
+            },
+            // 4. 数字 (通用)
+            // 这条规则对 C++ 的数字（整数、浮点数等）同样有效。
+            {
+                "name": "Raana - Numbers",
+                "scope": [
+                    "constant.numeric"
+                ],
+                "settings": {
+                    "foreground": "#77dd77"
+                }
+            },
+            // 5. 字符串和字符 (扩展)
+            // 扩展了原有规则，使其也包含 C++ 的单个字符 'c'。
+            {
+                "name": "Anon - Strings and Chars",
+                "scope": [
+                    "string",                       // "hello world"
+                    "constant.character.escape.cpp",// 转义字符 \n
+                    "constant.character.literal.cpp"// 单个字符 'c'
+                ],
+                "settings": {
+                    "foreground": "#FF8899"
+                }
+            },
+            // 6. 函数、变量和用户定义类型 (扩展)
+            // 这是扩展的核心。我们将 C++ 的变量、函数、类/结构体、命名空间等都归入这个颜色。
+            {
+                "name": "Tomori - Functions, Variables, and User Types",
+                "scope": [
+                    // --- 原有通用规则 ---
+                    "variable",
+                    "entity.name.function",
+                    "meta.function-call entity.name.function",
+                    "support.function",
+                    // --- 新增 C++ 规则 ---
+                    "entity.name.class.cpp",         // MyClass
+                    "entity.name.struct.cpp",        // MyStruct
+                    "entity.name.namespace.cpp",     // std::
+                    "variable.other.member.cpp",     // obj.member or obj->member
+                    "meta.function-call.cpp"         // 整个函数调用 myFunc()
+                ],
+                "settings": {
+                    "foreground": "#77bbdd"
+                }
             }
-        },
-        // 您原有的Python关键字规则 (保留)
-        {
-            "name": "Taki - Python Keywords",
-            "scope": [
-                "keyword.control.flow.python",
-                "keyword.control.conditional.python",
-                "keyword.control.import.python",
-                "keyword.operator.logical.python",
-                "keyword.other.python",
-                "storage.type.function.python",
-                "storage.type.class.python",
-                "support.type.python"
-            ],
-            "settings": {
-                "foreground": "#7777aa",
-                "fontStyle": "bold"
-            }
-        },
-        // --- 以下是新增的规则 ---
-        {
-            "name": "Custom - Numbers",
-            "scope": [
-                "constant.numeric" // 匹配所有数字
-            ],
-            "settings": {
-                "foreground": "#77dd77"
-            }
-        },
-        {
-            "name": "Custom - Strings",
-            "scope": [
-                "string" // 匹配所有字符串
-            ],
-            "settings": {
-                "foreground": "#FF8899"
-            }
-        },
-        {
-            "name": "Custom - Functions and Variables",
-            "scope": [
-                "variable", // 匹配所有变量
-                "entity.name.function", // 匹配函数和方法的定义名称
-                "meta.function-call entity.name.function", // 匹配函数调用
-                "support.function" // 匹配内置函数，如 print()
-            ],
-            "settings": {
-                "foreground": "#77bbdd"
-            }
-        }
-    ]
-}
+        ]
+    }
 }
