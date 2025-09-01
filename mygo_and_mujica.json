@@ -1,0 +1,125 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "editor.tokenColorCustomizations": {
+    "textMateRules": [
+        // 1. 注释 (更新)
+        {
+            "name": "Mustumi - Comments",
+            "scope": [
+                "comment",
+                "punctuation.definition.comment",
+                "string.quoted.docstring"
+            ],
+            "settings": {
+                "foreground": "#779977" // 已更新为新颜色
+            }
+        },
+        // 2. Python 关键字 (保留)
+        {
+            "name": "Taki - Python Keywords",
+            "scope": [
+                "keyword.control.flow.python",
+                "keyword.control.conditional.python",
+                "keyword.control.import.python",
+                "keyword.operator.logical.python",
+                "keyword.other.python",
+                "storage.type.function.python",
+                "storage.type.class.python",
+                "support.type.python"
+            ],
+            "settings": {
+                "foreground": "#7777aa",
+                "fontStyle": "bold"
+            }
+        },
+        // 3. 数字 (保留)
+        {
+            "name": "Rana - Numbers",
+            "scope": [
+                "constant.numeric"
+            ],
+            "settings": {
+                "foreground": "#77dd77"
+            }
+        },
+        // 4. 字符串 (保留)
+        {
+            "name": "Anon - Strings",
+            "scope": [
+                "string" // Docstrings除外，因为它被注释规则覆盖
+            ],
+            "settings": {
+                "foreground": "#FF8899"
+            }
+        },
+        // 5. 函数和变量 (保留)
+        {
+            "name": "Tomori - Functions and Variables",
+            "scope": [
+                "variable",
+                "entity.name.function",
+                "meta.function-call entity.name.function",
+                "support.function"
+            ],
+            "settings": {
+                "foreground": "#77bbdd"
+            }
+        },
+        // 6. 标点符号 (新)
+        {
+            "name": "Soyo - Punctuation",
+            "scope": [
+                "punctuation" // 匹配所有通用标点符号
+            ],
+            "settings": {
+                "foreground": "#ffdd88" // 使用了旧的注释颜色
+            }
+        },
+        // 7. 类、类型和模块 (新)
+        {
+            "name": "Uika - Classes, Types, Modules",
+            "scope": [
+                "entity.name.class",          // class MyClass:
+                "entity.name.type",           // 定义的类型
+                "entity.other.inherited-class", // 继承的类
+                "support.class"               // 内置的类
+            ],
+            "settings": {
+                "foreground": "#bb9955"
+            }
+        },
+        // 8. 语言常量和标签 (新)
+        {
+            "name": "Umiri - Language Constants & Tags",
+            "scope": [
+                "constant.language",          // True, False, None, self, this
+            ],
+            "settings": {
+                "foreground": "#335566"
+            } 
+        },
+        // 9. 装饰器、属性和正则表达式 (新)
+        {
+            "name": "Nyamu - Decorators, Attributes, RegEx",
+            "scope": [
+                "entity.name.function.decorator", // Python装饰器, 如 @my_decorator
+                "string.regexp"                   // 正则表达式
+            ],
+            "settings": {
+                "foreground": "#aa4477"
+            }
+        },
+        // 10. 运算符 (新)
+        {
+            "name": "Sakiko - Operators",
+            "scope": [
+                "keyword.operator" // +, -, =, *, and, or, in 等
+            ],
+            "settings": {
+                "foreground": "#7799cc"
+            }
+        }
+    ]
+    }
+}
