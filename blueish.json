@@ -1,0 +1,188 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorCustomizations": {
+        "editor.background": "#0a0e14",
+        "editor.foreground": "#f0f6fc",
+        "editorCursor.foreground": "#00ffcc", //00ffff
+        "editor.lineHighlightBackground": "#161b22",
+        "editorLineNumber.foreground": "#7777aa",
+        "editorLineNumber.activeForeground": "#00ffcc", //00ffff
+        "editor.selectionBackground": "#004444",//#005555
+        "editor.selectionForeground": "#ccffee",
+        "editorIndentGuide.background1": "#21262d",
+        "editorIndentGuide.activeBackground1": "#56b6c2",
+        "activityBar.background": "#0a0e14",
+        "sideBar.background": "#0a0e14",
+        "sideBar.foreground": "#c9d1d9",
+        "statusBar.background": "#0a0e14",
+        "statusBar.foreground": "#c9d1d9",
+        "titleBar.activeBackground": "#0a0e14",
+        "titleBar.activeForeground": "#c9d1d9",
+        "tab.activeForeground": "#dbebf7",
+        "tab.inactiveForeground": "#cbdbe7",
+        "tab.activeBackground": "#1a1e24",
+        "tab.inactiveBackground": "#0a0e14",
+        "tab.border": "#1a1e14",
+        "editorGroupHeader.tabsBackground": "#0a0e14",
+        "editorWarning.foreground": "#e6f17a",
+        "list.warningForeground": "#e6f17a",
+        "gitDecoration.warningResourceForeground": "#fcca00",
+        "editorBracketHighlight.foreground1": "#89ddff",
+        "editorBracketHighlight.foreground2": "#82aaff",
+        "editorBracketHighlight.foreground3": "#21c7a8"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "punctuation.definition.comment"
+                ],
+                "settings": {
+                    "foreground": "#676e95",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "keyword",
+                    "keyword.control",
+                    "storage.modifier",
+                    "meta.preprocessor"
+                ],
+                "settings": {
+                    "foreground": "#21c7a8",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "string",
+                    "string.quoted",
+                    "string.template",
+                    "punctuation.definition.string"
+                ],
+                "settings": {
+                    "foreground": "#89ddff", // #ffffaa
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.function",
+                    "entity.name.method",
+                    "support.function",
+                    "meta.function-call",
+                    "meta.method.declaration",
+                    "meta.function.definition"
+                ],
+                "settings": {
+                    "foreground": "#82aaff",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "variable",
+                    "variable.other.object",
+                    "variable.other.readwrite",
+                    "variable.other.local",
+                    "variable.parameter"
+                ],
+                "settings": {
+                    "foreground": "#8fb0ff", // #86baff, 89ddff, 66ffff
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": [
+                    "constant.numeric"
+                ],
+                "settings": {
+                    "foreground": "#c3e88d",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "meta.annotation",
+                    "storage.type.annotation",
+                    "entity.name.type.annotation",
+                    "meta.decorator",
+                    "entity.name.function.decorator",
+                    "punctuation.definition.decorator"
+                ],
+                "settings": {
+                    "foreground": "#e6f17a",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "storage.type",
+                    "storage.type.primitive.java",
+                    "storage.type.built-in",
+                ],
+                "settings": {
+                    "foreground": "#56ffd0",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.type",
+                    "entity.name.class",
+                    "support.class"
+                ],
+                "settings": {
+                    "foreground": "#55ffff",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "constant",
+                    "constant.numeric",
+                    "constant.language",
+                    "support.constant"
+                ],
+                "settings": {
+                    "foreground": "#c3e88d",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": [
+                    "punctuation",
+                    "meta.brace",
+                    "keyword.operator",
+                    "punctuation.definition",
+                    "punctuation.section",
+                    "punctuation.separator",
+                    "punctuation.terminator",
+                    "punctuation.bracket"
+                ],
+                "settings": {
+                    "foreground": "#ffffff"
+                }
+            },
+            {
+                "scope": [
+                    "variable.language.this",
+                    "variable.language.self"
+                ],
+                "settings": {
+                    "foreground": "#6fc0d0",//"#56b6c2",
+                    "fontStyle": "italic bold"
+                }
+            }
+        ]
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "decorator": {
+                "foreground": "#e6f17a"
+            }
+        }
+    }
+}
